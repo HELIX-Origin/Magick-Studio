@@ -88,3 +88,5 @@ The [`pages.yml`](.github/workflows/pages.yml) workflow deploys `docs/` on every
 ## 🤝 Contributing
 
 Contributions, bug reports, parameter updates, and custom sub-cogs features tracking ideas are completely welcome! Feel free to fork the framework package layers, modify view elements on top-level layout trees, and open a remote Pull Request pass cleanly.
+
+For contributor and coding-agent guidance, start with [`AGENTS.md`](AGENTS.md). Project-specific agent roles, skills, rules, and templates are in [`.agents/`](.agents/README.md); tracked defects and proposed work are in [`BUGS.md`](BUGS.md), [`TODO.md`](TODO.md), and [`ROADMAP.md`](ROADMAP.md).

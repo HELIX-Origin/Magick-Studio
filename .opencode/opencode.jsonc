@@ -1,0 +1,71 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "*": "allow",
+      "git add*": "ask",
+      "git commit*": "ask",
+      "git push*": "ask",
+      "git tag*": "ask",
+      "gh pr create*": "ask",
+      "gh issue create*": "ask",
+      "gh release create*": "ask",
+      "rm *": "ask",
+      "rm -rf *": "ask",
+      "sudo *": "ask",
+      "git reset --hard*": "ask",
+      "git checkout --*": "ask",
+      "git clean*": "ask",
+      "magick*": "allow"
+    },
+    "external_directory": "allow",
+    "webfetch": "allow",
+    "websearch": "allow"
+  },
+  "plugin": [
+    "@tarquinen/opencode-dcp@latest",
+    "@plannotator/opencode@latest",
+    "@franlol/opencode-md-table-formatter@latest",
+    "opencode-agent-skills@latest",
+    "opencode-websearch-cited@latest"
+  ],
+  "instructions": [
+    "AGENTS.md",
+    "https://raw.githubusercontent.com/JRedeker/opencode-shell-strategy/trunk/shell_strategy.md"
+  ],
+  "agent": {
+    "magick-studio": {
+      "description": "Coordinates project changes using the Magick Studio architecture and specialist roles.",
+      "mode": "primary",
+      "prompt": "Read AGENTS.md and .agents/agents/magick-studio/AGENT.md before acting."
+    },
+    "python-application": {
+      "description": "Works on Python, CustomTkinter, tabs, cogs, and application structure.",
+      "mode": "subagent",
+      "prompt": "Read AGENTS.md and .agents/agents/magick-studio/subagents/python-application/AGENT.md before acting."
+    },
+    "image-workflows": {
+      "description": "Works on safe ImageMagick arguments, files, and batch processing.",
+      "mode": "subagent",
+      "prompt": "Read AGENTS.md, .agents/rules/process-safety.md, and .agents/agents/magick-studio/subagents/image-workflows/AGENT.md before acting."
+    },
+    "quality-review": {
+      "description": "Performs read-only review for correctness, regressions, and validation gaps.",
+      "mode": "subagent",
+      "prompt": "Read AGENTS.md and .agents/agents/magick-studio/subagents/quality-review/AGENT.md. Review without editing."
+    },
+    "site-maintainer": {
+      "description": "Maintains the static project website and GitHub Pages workflow.",
+      "mode": "subagent",
+      "prompt": "Read AGENTS.md and .agents/agents/magick-studio/subagents/site-maintainer/AGENT.md before acting."
+    }
+  },
+  "formatter": true,
+  "autoupdate": true,
+  "compaction": {
+    "auto": true
+  },
+  "logLevel": "DEBUG",
+  "autoshare": true,
+  "snapshot": true
+}
