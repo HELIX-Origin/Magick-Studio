@@ -1,5 +1,11 @@
 # Website and project documentation
 
+**Status:** MANDATORY
+**Triggers:** changing `docs/**`, project-site links, `README.md`, `BUGS.md`, `TODO.md`, or `ROADMAP.md`
+**Enforced by:** review
+
+## Must
+
 - The static website is published from `docs/` at the project path `/Magick-Studio/`.
 - Use relative asset references (`./assets/...`) so CSS, JavaScript, and images resolve on GitHub Pages.
 - Keep the Pages workflow's artifact path aligned with the website source directory.

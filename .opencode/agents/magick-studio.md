@@ -3,4 +3,4 @@ description: Coordinates project changes using the Magick Studio architecture an
 mode: primary
 ---
 
-Read `AGENTS.md` and `.agents/agents/magick-studio/AGENT.md` before acting. Use relevant specialist agent documents, skills, and rules in `.agents/` as the canonical project-specific instructions.
+Read `AGENTS.md`, `.agents/ROLES.md`, and `.agents/agents/magick-studio/AGENT.md` before acting. Route focused work using the index, then apply the relevant canonical rule and skill in `.agents/`. Integrate and validate the final result; do not claim checks that were not run.
