@@ -23,19 +23,21 @@ A practical cross-platform desktop workspace for common ImageMagick operations, 
 
 | # | Milestone | Status | Scope |
 | --- | --- | --- | --- |
-| M1 | Reliability foundation | ⬜ Proposed | Keep the UI responsive during long ImageMagick/batch work; add progress, cancellation, and actionable partial-failure reporting; establish focused test seams. |
-| M2 | Workflow polish | ⬜ Proposed | Clarify batch output/overwrite behavior, improve validation/accessibility, and keep user guidance aligned with actual app behavior. |
-| M3 | Distribution and maintenance | ⬜ Proposed | Document supported dependency/tool versions and assess repeatable cross-platform packaging and release workflows. |
+| M1 | Restore core workflows | ⬜ Proposed | Fix the argument-parser and Browse blockers; preserve typed batch paths, exclude directories from batch inputs, and restore Linux startup. Verify with ImageMagick and desktop launch checks. |
+| M2 | Reliability foundation | ⬜ Proposed | Keep the UI responsive during long ImageMagick/batch work; add progress, cancellation, actionable partial-failure reporting, and focused test seams. Investigate output collisions and path handling. |
+| M3 | Workflow polish | ⬜ Proposed | Define batch output/overwrite behavior after reproduction, improve validation/accessibility, and keep user guidance aligned with actual app behavior. |
+| M4 | Distribution and maintenance | ⬜ Proposed | Document supported dependency/tool versions and assess repeatable cross-platform packaging and release workflows. |
 
-## 🎯 Current focus: M1 — Reliability foundation
+## 🎯 Current focus: M1 — Restore core workflows
 
-The actionable checklist is maintained in `TODO.md`. The synchronous process wait is documented as open in `BUGS.md`; runtime reproduction and design scope remain to be completed.
+The actionable checklist is maintained in `TODO.md`. `BUGS.md` distinguishes source-confirmed execution, browsing, batch, and launch defects from investigations; none of the image flows has been validated end-to-end in this audit. Address the blockers before designing asynchronous execution.
 
 ## 📍 Current baseline
 
 - Python 3.10+ and CustomTkinter desktop app with five top-level tabs and focused cog views.
 - `CoreEngine` invokes ImageMagick and writes diagnostics; its current process wait is synchronous.
 - CI installs `MagickStudio/requirements.txt` and syntax-compiles selected entry/core/top-level tab modules.
+- The advertised Python 3.10 minimum is not covered by CI's Python 3.11 syntax check; cog modules are excluded.
 - No dedicated test suite, linter, or application packaging workflow is currently configured.
 
 ## 🔁 Recurring expectations
