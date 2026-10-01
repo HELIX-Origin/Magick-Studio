@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Magick Studio: a cross-platform graphical interface for ImageMagick, built with Python and CustomTkinter.">
+  <title>Magick Studio | HELIX Origin</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <aside class="sidebar">
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/icon.png" alt="Magick Studio icon" width="80" height="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Magick Studio">Magick Studio</h1>
+          <p class="title">ImageMagick GUI</p>
+        </div>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <p class="sidebar-description">A professional, cross-platform graphical user interface for ImageMagick, built entirely in Python using CustomTkinter.</p>
+        <div class="separator"></div>
+        <ul class="sidebar-links">
+          <li><a class="profile-link" href="https://github.com/HELIX-Origin/Magick-Studio">Source on GitHub ↗</a></li>
+          <li><a class="profile-link" href="https://github.com/HELIX-Origin/Magick-Studio/issues">Report an issue ↗</a></li>
+          <li><a class="profile-link" href="https://helix-origin.github.io/">← HELIX Origin home</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <nav class="navbar" aria-label="Main navigation">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link active" href="#about" data-nav-link>About</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#install" data-nav-link>Install</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#structure" data-nav-link>Structure</a></li>
+        </ul>
+      </nav>
+
+      <article class="about active" id="about" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About</h2>
+        </header>
+        <section class="about-text">
+          <p>Magick Studio wraps the ImageMagick command-line toolkit in a friendly desktop workspace. Resize, crop, convert, apply effects, batch-process whole folders, and inspect image metadata without memorising CLI flags.</p>
+        </section>
+        <figure class="preview-box">
+          <img src="./assets/images/preview.png" alt="Magick Studio application preview" loading="lazy">
+        </figure>
+        <section class="service">
+          <h3 class="h3 service-title">Features</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Geometry &amp; Format Suite</h4>
+                <p class="service-item-text">Proportional scaling (<code>-resize</code>), precise crops (<code>-crop</code>), rotation, and canvas extensions (<code>-extent</code>).</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Color &amp; Effects Core</h4>
+                <p class="service-item-text">Tune compression (<code>-quality</code>), strip metadata (<code>-strip</code>), map color spaces (<code>-colorspace</code>), and apply blur and filters.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Batch Processing Engine</h4>
+                <p class="service-item-text">Process hundreds of files in a folder at once using extension filters and custom argument chains.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Diagnostics Console</h4>
+                <p class="service-item-text">Run raw ImageMagick commands and extract full image metadata with <code>identify -verbose</code>.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="resume" id="install" data-page="install">
+        <header>
+          <h2 class="h2 article-title">Install</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <h3 class="h3">Prerequisites</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Python</h4>
+              <span>v3.10 or higher</span>
+              <p class="timeline-text">Install Python and make sure it is on your system PATH.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">ImageMagick</h4>
+              <span>CLI toolkit</span>
+              <p class="timeline-text">Install the <a href="https://imagemagick.org/script/download.php">ImageMagick</a> command-line binaries and add them to your system PATH.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Python modules</h4>
+              <span>customtkinter, Pillow</span>
+              <p class="timeline-text"><code>pip install -r MagickStudio/requirements.txt</code></p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <h3 class="h3">Launch</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Any platform</h4>
+              <p class="timeline-text">From the <code>MagickStudio</code> folder, run <code>python main.py</code>.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Windows</h4>
+              <p class="timeline-text">Double-click <code>launch.vbs</code> to open the GUI without a console window.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">macOS</h4>
+              <p class="timeline-text">Double-click <code>launch.command</code> to open the GUI without a console window.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Linux</h4>
+              <p class="timeline-text">Run <code>chmod +x launch.sh</code> once, then double-click <code>launch.sh</code>. Use <code>MagickStudio.desktop</code> to add a desktop shortcut.</p>
+            </li>
+          </ol>
+        </section>
+      </article>
+
+      <article class="structure" id="structure" data-page="structure">
+        <header>
+          <h2 class="h2 article-title">Structure</h2>
+        </header>
+        <section class="about-text">
+          <p>Each main tab is a controller module that loads independent sub-views (“cogs”), so new tools can be added without touching the rest of the app.</p>
+        </section>
+        <pre class="code-block"><code>MagickStudio/
+├── main.py                # Application entry point
+├── core.py                # Shared subprocess wrapper &amp; styling
+├── requirements.txt       # Python dependencies
+├── launch.vbs             # Windows launcher
+├── launch.sh              # Linux launcher
+├── launch.command         # macOS launcher
+├── MagickStudio.desktop   # Linux desktop shortcut
+├── assets/                # Application icons
+└── tabs/                  # Main panel controllers
+    ├── geometry.py
+    ├── effects.py
+    ├── raw.py
+    ├── batch.py
+    ├── documentation.py
+    ├── geometry_cogs/
+    ├── effects_cogs/
+    ├── raw_cogs/
+    ├── batch_cogs/
+    └── doc_cogs/</code></pre>
+        <section class="about-text">
+          <p>Contributions, bug reports, and feature ideas are welcome. Fork the <a href="https://github.com/HELIX-Origin/Magick-Studio">repository</a> and open a pull request.</p>
+        </section>
+      </article>
+
+      <footer class="site-footer">
+        <p>Magick Studio is released under the BSD 3-Clause license. Page design based on <a href="https://github.com/codewithsadee/vcard-personal-portfolio">vCard</a> by codewithsadee (MIT).</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

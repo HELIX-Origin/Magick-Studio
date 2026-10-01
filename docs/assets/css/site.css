@@ -1,0 +1,148 @@
+/*-----------------------------------*\
+  #site.css
+  Magick Studio overrides for the vCard template
+\*-----------------------------------*/
+
+.sidebar {
+  max-height: none;
+  overflow: visible;
+}
+
+.sidebar-info_more {
+  opacity: 1;
+  visibility: visible;
+}
+
+.avatar-box {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.sidebar-description {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.7;
+}
+
+.sidebar-links {
+  display: grid;
+  gap: 10px;
+}
+
+.profile-link,
+.about-text a,
+.timeline-text a,
+.site-footer a {
+  color: var(--orange-yellow-crayola);
+}
+
+.profile-link {
+  font-size: var(--fs-6);
+}
+
+.navbar-link {
+  display: block;
+}
+
+.navbar-link:hover,
+.navbar-link:focus-visible,
+.profile-link:hover,
+.about-text a:hover,
+.timeline-text a:hover,
+.site-footer a:hover {
+  color: var(--white-1);
+}
+
+.about-text {
+  margin-bottom: 35px;
+}
+
+.about-text a {
+  display: inline;
+}
+
+.preview-box {
+  margin: 0 0 35px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+}
+
+.preview-box img {
+  width: 100%;
+  height: auto;
+}
+
+.service-list {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.service-content-box {
+  text-align: left;
+}
+
+.h3,
+.h4 {
+  text-transform: none;
+}
+
+code {
+  color: var(--orange-yellow-crayola);
+  font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+  font-size: 0.95em;
+  overflow-wrap: anywhere;
+}
+
+.code-block {
+  background: var(--eerie-black-1);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 35px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+.code-block code {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+.site-footer {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  line-height: 1.6;
+  text-align: center;
+  margin: 15px 12px 90px;
+}
+
+@media (min-width: 1024px) {
+  article {
+    padding-top: 85px;
+  }
+
+  .site-footer {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .avatar-box {
+    width: 150px;
+    height: 150px;
+  }
+}
