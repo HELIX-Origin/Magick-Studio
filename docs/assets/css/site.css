@@ -55,6 +55,49 @@
   display: block;
 }
 
+.translate-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 7px;
+}
+
+.translate-control label {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+}
+
+.translate-control select {
+  max-width: 130px;
+  padding: 7px 8px;
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  background: var(--eerie-black-2);
+  color: var(--light-gray);
+  font: inherit;
+  font-size: var(--fs-8);
+  cursor: pointer;
+}
+
+.translate-control select:focus-visible {
+  outline: 2px solid var(--orange-yellow-crayola);
+  outline-offset: 2px;
+}
+
+.translate-control select:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .navbar-link:hover,
 .navbar-link:focus-visible,
 .profile-link:hover,
