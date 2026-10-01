@@ -81,7 +81,7 @@ Ensure these target core components are installed on your device and bound to yo
 
 The project page is published with GitHub Pages at [helix-origin.github.io/Magick-Studio](https://helix-origin.github.io/Magick-Studio/), as a subpage of the [HELIX Origin homepage](https://helix-origin.github.io/). It is a static site in [`docs/`](docs/) styled with the [vCard – Personal Portfolio](https://github.com/codewithsadee/vcard-personal-portfolio) template (MIT license; see [`docs/LICENSE`](docs/LICENSE)).
 
-To publish it, set **Settings → Pages → Source** to **GitHub Actions**; the [`pages.yml`](.github/workflows/pages.yml) workflow deploys `docs/` on every push to `main` that changes the site. Keep asset paths relative (for example `./assets/css/style.css`) so they resolve beneath `/Magick-Studio/`. To preview locally, run `python3 -m http.server --directory docs` and open `http://localhost:8000/`.
+The [`pages.yml`](.github/workflows/pages.yml) workflow deploys `docs/` on every push to `main` that changes the site. For first-time setup, add a repository secret named `PAGES_TOKEN` with Pages write permission so the workflow can enable Pages; alternatively, enable Pages in **Settings → Pages** and select **GitHub Actions** as the source. Keep asset paths relative (for example `./assets/css/style.css`) so they resolve beneath `/Magick-Studio/`. To preview locally, run `python3 -m http.server --directory docs` and open `http://localhost:8000/`.
 
 ---
 
