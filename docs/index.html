@@ -156,7 +156,7 @@
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Linux</h4>
-              <p class="timeline-text">Run <code>chmod +x launch.sh</code> once, then double-click <code>launch.sh</code>. Use <code>MagickStudio.desktop</code> to add a desktop shortcut.</p>
+              <p class="timeline-text">From the <code>MagickStudio</code> folder, run <code>python3 main.py</code>. The desktop shortcut currently references a missing <code>launch.sh</code>; see the repository's <a href="https://github.com/HELIX-Origin/Magick-Studio/blob/main/BUGS.md">known issues</a>.</p>
             </li>
           </ol>
         </section>
@@ -174,9 +174,8 @@
 ├── core.py                # Shared subprocess wrapper &amp; styling
 ├── requirements.txt       # Python dependencies
 ├── launch.vbs             # Windows launcher
-├── launch.sh              # Linux launcher
 ├── launch.command         # macOS launcher
-├── MagickStudio.desktop   # Linux desktop shortcut
+├── MagickStudio.desktop   # Linux desktop entry (launcher missing)
 ├── assets/                # Application icons
 └── tabs/                  # Main panel controllers
     ├── geometry.py

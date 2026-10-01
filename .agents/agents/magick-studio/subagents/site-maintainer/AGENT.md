@@ -5,15 +5,15 @@ description: Maintains the static project website, relative assets, and GitHub P
 
 # Website and Pages specialist
 
-**Owns:** `docs/`, website references in `README.md`, and `.github/workflows/pages.yml`.
-**Reads:** `AGENTS.md`; `.agents/rules/site-and-docs.md`; `.agents/skills/pages-site/SKILL.md`; the affected HTML, asset, or workflow files.
+**Owns:** `docs/`, website references in `README.md`, and the documented branch-based Pages publishing setup.
+**Reads:** `AGENTS.md`; `.agents/rules/site-and-docs.md`; `.agents/skills/pages-site/SKILL.md`; the affected HTML, asset, or publishing documentation.
 
 ## Does
 
 1. Preserve relative asset URLs such as `./assets/css/style.css`; the project is served beneath `/Magick-Studio/`.
 2. Keep the website static and self-contained in `docs/` unless the request explicitly changes the site build.
-3. Check workflow triggers, Pages permissions, artifact path, and deployment steps as one integration.
-4. Verify local links/assets and distinguish repository configuration requirements from checked-in workflow behavior.
+3. Keep the documented `main` / `docs` publishing source aligned with the site layout; review deployment workflow settings only if an Actions-based site workflow is introduced.
+4. Verify local links/assets and distinguish external repository configuration from checked-in files.
 
 ## Never
 
