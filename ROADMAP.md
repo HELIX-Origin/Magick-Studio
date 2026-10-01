@@ -23,7 +23,7 @@ A practical cross-platform desktop workspace for common ImageMagick operations, 
 
 | # | Milestone | Status | Scope |
 | --- | --- | --- | --- |
-| M1 | Restore core workflows | ⬜ Proposed | Fix the argument-parser and Browse blockers; preserve typed batch paths, exclude directories from batch inputs, and restore Linux startup. Verify with ImageMagick and desktop launch checks. |
+| M1 | Restore core workflows | ⬜ Proposed | Fix the argument-parser and Browse blockers; preserve form state across views, exclude directories from batch inputs, and restore Linux startup. Verify with ImageMagick and desktop launch checks. |
 | M2 | Reliability foundation | ⬜ Proposed | Keep the UI responsive during long ImageMagick/batch work; add progress, cancellation, actionable partial-failure reporting, and focused test seams. Investigate output collisions and path handling. |
 | M3 | Workflow polish | ⬜ Proposed | Define batch output/overwrite behavior after reproduction, improve validation/accessibility, and keep user guidance aligned with actual app behavior. |
 | M4 | Distribution and maintenance | ⬜ Proposed | Document supported dependency/tool versions and assess repeatable cross-platform packaging and release workflows. |

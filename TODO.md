@@ -16,6 +16,7 @@ No release version or date is committed. Address source-confirmed blockers in `B
 - ⬜ **Repair file selection and batch setup** (`BUGS.md`):
   - Correct output-path suggestions in Geometry and Effects Browse dialogs.
   - Persist manually edited batch paths when changing views.
+  - Preserve in-progress Geometry, Effects, and batch pipeline settings across view switches.
   - Restrict batch input enumeration to files; verify extension filtering and empty directories.
 - ⬜ **Restore Linux startup** (`BUGS.md`):
   - Provide a working launcher or correct the desktop entry, then verify launch outside the application directory.

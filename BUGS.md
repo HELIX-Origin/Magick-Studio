@@ -37,6 +37,15 @@
 - **Expected behavior:** Typed and picker-selected paths persist across views.
 - **Next steps:** Synchronize both entries before the paths view is destroyed; verify typed, picker-selected, canceled, and edited paths.
 
+### 🚨 View switching discards unsaved operation settings
+
+- **Severity:** Medium (lost form state).
+- **Status:** Open; source-level cause confirmed, GUI interaction not yet exercised.
+- **Affected areas:** `MagickStudio/tabs/geometry.py:34-39`, `MagickStudio/tabs/effects.py:33-38`, `MagickStudio/tabs/batch.py:39-46`, `MagickStudio/tabs/batch_cogs/pipeline.py:13-38`.
+- **Reproduction:** Type an input/output path or change a setting in Geometry or Effects, switch to another category, then return. The controller destroys the previous widgets and creates new blank fields/default cog values. Likewise, edit the batch filter, arguments, or extension and switch to the paths view without running: `PipelineCog.sync_state()` is called only by `fire_batch()`, so returning restores the old settings.
+- **Expected behavior:** Switching between views preserves in-progress paths and configuration until the user changes or resets them.
+- **Next steps:** Decide which values are shared between cogs and persist them before view destruction; verify switching away and back without running an operation.
+
 ### 🚨 Batch processing can pass directories as input files
 
 - **Severity:** Medium (incorrect batch selection).
