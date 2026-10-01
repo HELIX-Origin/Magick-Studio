@@ -5,6 +5,10 @@ description: Use when changing the Python desktop application, CustomTkinter UI,
 
 # Python GUI change procedure
 
+**Use when:** changing the desktop UI, Python application structure, tabs, or cogs.
+
+## Steps
+
 1. Identify the owning tab, its controller, and the relevant sibling cogs.
 2. Trace how the selected view receives its parent, shared engine, and any persistent state.
 3. Keep UI work in the owning module and preserve the existing controller/cog separation.
@@ -12,3 +16,8 @@ description: Use when changing the Python desktop application, CustomTkinter UI,
 5. Avoid long-running work on Tk's event thread; use a deliberate thread-safe UI update design if asynchronous execution is in scope.
 6. Compile changed files and the source modules listed by the existing CI workflow.
 7. State which behavior was syntax-checked versus exercised at runtime.
+
+## Never
+
+- Never edit vendored source to implement app features.
+- Never claim runtime behavior based on syntax compilation alone.
