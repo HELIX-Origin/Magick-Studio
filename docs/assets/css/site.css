@@ -3,6 +3,24 @@
   Magick Studio overrides for the vCard template
 \*-----------------------------------*/
 
+:root {
+  --smoky-black: #080e29;
+  --eerie-black-1: #121d3b;
+  --eerie-black-2: #0e1834;
+  --onyx: #1a2b50;
+  --jet: #354b72;
+  --orange-yellow-crayola: #91eaff;
+  --vegas-gold: #c5a9ff;
+  --light-gray: #d7e7f5;
+  --light-gray-70: rgba(215, 231, 245, 0.75);
+  --bg-gradient-onyx: linear-gradient(to bottom right, #254b73, #1c2852);
+  --bg-gradient-jet: linear-gradient(to bottom right, rgba(87, 195, 235, 0.12), rgba(145, 104, 220, 0)), #121d3b;
+  --bg-gradient-yellow-1: linear-gradient(to bottom right, #91eaff, rgba(171, 133, 255, 0) 55%);
+  --bg-gradient-yellow-2: linear-gradient(135deg, rgba(145, 234, 255, 0.25), rgba(171, 133, 255, 0) 60%), #121d3b;
+  --border-gradient-onyx: linear-gradient(to bottom right, #5079a5, rgba(80, 121, 165, 0) 50%);
+  --text-gradient-yellow: linear-gradient(to right, #91eaff, #c5a9ff);
+}
+
 .sidebar {
   max-height: none;
   overflow: visible;
