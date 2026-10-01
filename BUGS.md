@@ -22,7 +22,13 @@
 
 ## Closed
 
-_No closed defects recorded._
+### ✅ Pages Actions deployment conflicts with branch-based publishing
+
+- **Severity:** High (deployment)
+- **Status:** Fixed in the repository; the external Pages source remains configured as `main` / `docs`.
+- **Actual behavior:** The Actions deployment failed during site configuration with `Create Pages site failed: Resource not accessible by integration` (workflow run [36922128936](https://github.com/HELIX-Origin/Magick-Studio/actions/runs/36922128936)).
+- **Cause:** The repository's Pages source is the `docs/` folder on `main`, but the checked-in workflow attempted to provision and deploy a separate Actions-based Pages site.
+- **Resolution:** Removed the Actions deployment workflow. GitHub Pages now publishes directly from the configured `main` / `docs` source.
 
 ## Filing a bug
 
