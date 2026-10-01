@@ -8,6 +8,6 @@
 
 - The static website is published from `docs/` at the project path `/Magick-Studio/`.
 - Use relative asset references (`./assets/...`) so CSS, JavaScript, and images resolve on GitHub Pages.
-- Keep the Pages workflow's artifact path aligned with the website source directory.
+- Keep the documented `main` / `docs` publishing source aligned with the website directory; if an Actions-based Pages workflow is introduced, check its artifact path too.
 - Do not assert that Pages is enabled or deployed based only on repository files; configuration, secrets, and environment approvals are managed in GitHub.
 - Keep issue records evidence-based: confirmed reproducible defects belong in `BUGS.md`; enhancements and unverified concerns belong in `TODO.md`.

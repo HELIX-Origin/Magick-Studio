@@ -10,10 +10,12 @@ A professional, cross-platform graphical user interface (GUI) for **ImageMagick*
 
 * **Geometry & Format Suite:** Fast proportionally scaled down sampling (`-resize`), precise box boundary extractions (`-crop`), and backdrop canvas extensions (`-extent`).
 * **Color & Effects Core:** Tailor compression ratios (`-quality`), clean profile metadata arrays (`-strip`), map color profiles (`-colorspace`), and apply localized convolution matrices.
-* **Mass Batch Processing Engine:** Automate directory evaluations over hundreds of media files simultaneously using custom extension filters and arguments chain strings.
+* **Mass Batch Processing Engine:** Automate directory evaluations over many media files using custom extension filters and argument chains.
 * **Diagnostics Log Console:** Built-in un-sandboxed raw CLI pipeline simulation field alongside instant full-detail metadata extraction pipelines (`identify -verbose`).
 
 ---
+
+**Current limitations:** Image actions are blocked by a command-parsing defect; the Geometry and Effects Browse dialogs also fail when suggesting output paths. See [`BUGS.md`](BUGS.md) for confirmed issues and [`TODO.md`](TODO.md) for planned remediation.
 
 ## 📁 System Architecture Layout
 
@@ -23,9 +25,8 @@ MagickStudio/
 ├── core.py                # Shared Subprocess Wrapper & Styling Guide
 ├── requirements.txt       # Python Dependencies Manifest
 ├── launch.vbs             # Windows Hidden Console Window Wrapper
-├── launch.sh              # Linux Hidden Console Window Wrapper
 ├── launch.command         # macOS Hidden Console Window Wrapper
-├── MagicStudio.desktop    # Desktop shortcut entree for linux users
+├── MagickStudio.desktop   # Linux desktop entry (launcher target currently missing)
 ├── assets/                # Auto-compiled Multi-Resolution Icon Folder
 └── tabs/                  # Main Panel Module Controllers Package
     ├── geometry.py
@@ -45,7 +46,7 @@ MagickStudio/
 ## 🏁 Launching the Studio Application
 
 
-Once your deployment bootstrapper finishes successfully, spin up the unified workspace app container:
+After installing the prerequisites, start the app from the `MagickStudio/` directory:
 
 ```bash
 python main.py
@@ -61,9 +62,7 @@ Double-click the **`launch.command`** script file to pop the GUI interface open 
 
 ### Linux
 
-Double-click the **`launch.sh`** script file to pop the GUI interface open instantly with zero background command prompt terminal windows appearing. There is also a **`MagicStudio.desktop`** file for use with adding a desktop shortcut to the Magic Studio app on Linux.
-
-**Note**: Linux users will need to run `chmod +x launch.sh` to make the launch script executeable.
+Run **`python3 main.py`** from `MagickStudio/`. The tracked **`MagickStudio.desktop`** entry points to a missing `launch.sh`; it cannot be used until the launcher is restored (see [`BUGS.md`](BUGS.md)).
 
 ---
 
